@@ -1,22 +1,25 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
 
-// this function shows that even if the counter is increasing the value is not updating in the UI
+
 function App() {
-  let counter = 15
+  // this setConter name is just a convention you can name it anything
+  let [counter, setCounter] = useState(15)
 
   const addValue = () => {
     console.log("clicked", counter)
     counter = counter + 1
+    setCounter(counter)
   }
 
   return (
     <>
     <h1>Chai aur react</h1>
     <h2>Counter value: {counter}</h2>
-    <button onClick={addValue}>Add value</button>
+    <button onClick={addValue}>Add value {counter}</button>
+    <p>footer : {counter}</p>
     <br />
     <button>remove value</button>
     </>
