@@ -14,6 +14,7 @@ function App() {
 
       counter = counter + 1 
     }
+    // this shows how react handles multiple updates back to back it bundles it and updates once at next render 
     setCounter(counter+1)
     counter = counter + 1
     counter = counter + 1
