@@ -8,7 +8,7 @@ function App() {
   const [todos, setTodos] = useState([])
 
   const addTodo = (todo) => {
-    setTodos((prev) => [{id: Date.now(), ...todo}, ...prev] )
+    setTodos((prev) => [{id: Date.now(), ...todo}, ...prev] ) // prev is the previous state of todos
   }
 
   const updateTodo = (id, todo) => {
@@ -24,9 +24,7 @@ function App() {
   const toggleComplete = (id) => {
     //console.log(id);
     setTodos((prev) => 
-    prev.map((prevTodo) => 
-      prevTodo.id === id ? { ...prevTodo, 
-        completed: !prevTodo.completed } : prevTodo))
+    prev.map((prevTodo) => prevTodo.id === id ? { ...prevTodo, completed: !prevTodo.completed } : prevTodo)) // implicit return because single expression also no curly braces used.
   }
 
   useEffect(() => {

@@ -8,10 +8,10 @@ export const TodoContext = createContext({
             completed: false,
         }
     ],
-    addTodo: (todo) => {},
-    updateTodo: (id, todo) => {},
-    deleteTodo: (id) => {},
-    toggleComplete: (id) => {}
+    addTodo: (_todo) => {}, // _ is used to indicate that the parameter is not used and to avoid eslint error
+    updateTodo: (_id, _todo) => {},
+    deleteTodo: (_id) => {},
+    toggleComplete: (_id) => {}
 })
 
 

@@ -1,3 +1,5 @@
+// In this project we didn't used usememo so im not sure if the child components like todoItem will re-render or not like we kept the keys and refrerence to change only for the todo that got deleted updated or added and remaining once had same reference but everytime app gets re-rendered the child component will also get re-rendered because they are not memoized. am i right?
+
 import React, { useState } from 'react'
 import { useTodo } from '../contexts/TodoContext';
 
